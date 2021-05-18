@@ -5,8 +5,8 @@ function computerPlay() {
     else return "scissors";
 }
 
-function playRound(playerSelection, computerSelection) {
-    playerSelection = playerSelection.toLowerCase();
+function playRound(playerSelection){
+    const computerSelection = computerPlay();
     if(playerSelection == computerSelection) return "Tied!";
     else if(playerSelection == "rock"){
         if(computerSelection == "paper") return "You Lose! Paper Beats Rock";
@@ -23,27 +23,35 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-function game() {
-    let player = 0;
-    let computer = 0;
-    for(let i = 0; i < 5; i++){
-        const playerSelection = window.prompt("Enter here!");
-        const computerSelection = computerPlay();
-        if(playRound(playerSelection, computerSelection) == "Tied!") {
-            console.log(playRound(playerSelection, computerSelection));
-            continue;
+
+const buttons = document.querySelectorAll('button');
+let computer = 0;
+let player = 0;
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        var score = playRound(button.value);
+        document.getElementById('score').innerHTML = score;
+        if(score == "Tied!") {
         }
-        else if(playRound(playerSelection, computerSelection) == "You Win!") {
-            console.log(playRound(playerSelection, computerSelection));
+        else if(score == "You Win!") {
             player++;
         }
         else {
-            console.log(playRound(playerSelection, computerSelection));
             computer++;
         }
-    }
-    if(computer == player)return "Match Tied!";
-    else if(computer > player) return "You Lose!";
-    else return "You Win!";
+        let result = "play again";
+        document.getElementById('running').innerHTML = "Computer: " + computer + " ,PLayer: " + player;
+        if(player == 5 || computer == 5){
+            if(player == 5){
+                result = "You Win!";
+            }
+            else {
+                result = "You Lose!";
+            }
+            player = 0;
+            computer = 0;
+        }
+        document.getElementById('result').innerHTML = result;
+    });
     
-}
+});

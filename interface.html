@@ -1,9 +1,90 @@
 <!DOCTYPE html>
 <head>
     <title>ROCK PAPER SCISSORS</title>
+    <style>
+        body {
+            background-image: url(rock-paper-scissors.png); 
+            background-repeat: no-repeat;
+            background-size: 100% 100%; 
+            background-attachment: fixed;
+        }
+        h1 {
+            color: rgb(33, 4, 100);
+            text-align: center; 
+            font-size: 64px;
+            background-color: white;
+            border-radius: 25px;
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        img {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+        }
+        button{
+            border-radius: 100%;
+        }
+        button:hover {
+            background-color: lawngreen;
+        }
+        #score {
+            color:rgb(255, 0, 0); 
+            padding: 10px 10px 10px 0px; 
+            font-size: 32px;
+            font-family: monospace;
+            text-align: center;
+            background-color: whitesmoke;
+            border-radius: 25px;
+            width: 600px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+        #running {
+            padding: 10px 10px 10px 0px; 
+            font-size: 32px;
+            font-family: monospace;
+            text-align: center;
+            background-color: whitesmoke;
+            border-radius: 25px;
+            width: 600px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+        #result {
+            padding: 10px 10px 10px 0px; 
+            font-size: 32px;
+            font-family: monospace;
+            text-align: center;
+            background-color: whitesmoke;
+            border-radius: 25px;
+            width: 600px;
+            height: 40px;
+            margin-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
+    
+    <h1>Rock Paper Scissors</h1>
+    <div id="container" style="text-align: center;">
+        <button value="rock"><a><img src="rock.png"></a></button>
+        <button value="paper"><a><img src="paper.png"></a></button>
+        <button value="scissors"><a><img src="scissors.png"></a></button>
+    </div>
+    <div id="score" ></div>
+    <div id="running">Running Score:</div>
+    <div id="result"></div>
     <script src="game.js">
-        
     </script>
 </body>
