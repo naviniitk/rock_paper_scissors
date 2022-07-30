@@ -1,0 +1,76 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #e1eedd;
+}
+h1 {
+  color: rgb(33, 4, 100);
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+}
+button {
+  border-radius: 8px;
+  border-color: #183a1d;
+  margin: 20px;
+  background-color: #e1eedd;
+}
+button:hover {
+  cursor: pointer;
+  filter: drop-shadow(4px 4px 4px #111111);
+}
+button:active {
+  background-color: #d0ddcc;
+  cursor: pointer;
+  filter: none;
+}
+#score {
+  color: rgb(255, 0, 0);
+  padding: 10px 10px 10px 0px;
+  font-size: 32px;
+  font-family: monospace;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  width: 600px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+#running {
+  padding: 10px 10px 10px 0px;
+  font-size: 32px;
+  font-family: monospace;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  width: 600px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
+#result {
+  padding: 10px 10px 10px 0px;
+  font-size: 32px;
+  font-family: monospace;
+  text-align: center;
+  background-color: whitesmoke;
+  border-radius: 25px;
+  width: 600px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+}
